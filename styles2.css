@@ -1,0 +1,42 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f4f4f4;
+    }
+
+    form, .libros, .calculo {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    input, select, label {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+      display: inline;
+      width: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      background-color: #5cb85c;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .hidden {
+      display: none;
+    }

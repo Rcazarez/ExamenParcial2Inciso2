@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - Tienda de Libros</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+  <h1>Crear Cuenta en la Tienda de Libros</h1>
+
+  <form id="registroForm">
+    <label>Nombre:
+      <input type="text" id="nombre" required>
+    </label>
+
+    <label>Apellidos:
+      <input type="text" id="apellidos" required>
+    </label>
+
+    <label>Teléfono (xxx xx xx xx):
+      <input type="text" id="telefono" pattern="\\d{3} \\d{2} \\d{2} \\d{2}" required>
+    </label>
+
+    <label>Contraseña (mínimo 8 caracteres):
+      <input type="password" id="password" minlength="8" required>
+    </label>
+
+    <label>Áreas de interés:
+      <select id="interes" required>
+        <option value="">-- Selecciona una opción --</option>
+        <option value="programacion">Programación</option>
+        <option value="diseño">Diseño</option>
+        <option value="ciencias">Ciencias</option>
+      </select>
+    </label>
+
+    <label>Fecha de nacimiento:
+      <input type="date" id="fechaNacimiento" required>
+    </label>
+
+    <label>
+      <input type="checkbox" id="acepto" required>
+      Acepto los términos de protección de datos
+    </label>
+
+    <button type="submit">Agregar</button>
+  </form>
+
+  <div id="librosSection" class="libros hidden">
+    <h2>Selecciona un Libro</h2>
+    <label>Nombre del libro:
+      <select id="libro">
+        <option value="">-- Elige un libro --</option>
+        <option value="libro1">Aprende JavaScript</option>
+        <option value="libro2">Diseño Gráfico Digital</option>
+        <option value="libro3">Ciencias Naturales</option>
+      </select>
+    </label>
+
+    <label>Precio:
+      <input type="number" id="precio" step="0.01" min="0" required>
+    </label>
+
+    <label>IVA:
+      <label><input type="radio" name="iva" value="0.10" checked> Reducido (10%)</label>
+      <label><input type="radio" name="iva" value="0.21"> Normal (21%)</label>
+    </label>
+
+    <label>Resultado (precio con IVA):
+      <input type="text" id="resultado" readonly>
+    </label>
+
+    <button onclick="calcularPrecio()">Calcular</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
